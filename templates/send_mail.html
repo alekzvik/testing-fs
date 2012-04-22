@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+  <form action="{{ url_for('send_mail') }}" method=post class=add-entry>
+    <dl>
+      <dt>Subject:
+      <dd><input type=text size=30 name=subject>
+      <dt>Sender:
+      <dd><input type=text size=30 name=sender>
+      <dt>Recipient:
+      <dd><input type=text size=30 name=recipients>
+      <dt>Body:
+      <dd><textarea name=body rows=5 cols=40></textarea>
+      <dd><input type=submit value=Send Mail>
+    </dl>
+  </form>
+{% endblock %}

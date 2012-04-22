@@ -1,0 +1,10 @@
+<!doctype html>
+<title>Flask-Sendmail simple app</title>
+<div class=page>
+  <h1>Flask-Sendmail simple app</h1>
+
+  {% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+  {% endfor %}
+  {% block body %}{% endblock %}
+</div>
