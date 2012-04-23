@@ -18,7 +18,7 @@ def index():
 def send_mail():
     msg = Message(
         subject=request.form['subject'],
-        recipients=list(request.form['recipients']),
+        recipients=request.form['recipients'].replace(' ','').split(','),
         sender=request.form['sender'],
         body=request.form['body'],
     )
